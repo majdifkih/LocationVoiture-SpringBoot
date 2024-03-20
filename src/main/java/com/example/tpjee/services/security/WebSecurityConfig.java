@@ -1,8 +1,8 @@
 package com.example.tpjee.services.security;
 
-import com.itgate.ecommerce.security.jwt.AuthEntryPointJwt;
-import com.itgate.ecommerce.security.jwt.AuthTokenFilter;
-import com.itgate.ecommerce.security.services.UserDetailsServiceImpl;
+import com.example.tpjee.services.security.jwt.AuthEntryPointJwt;
+import com.example.tpjee.services.security.jwt.AuthTokenFilter;
+import com.example.tpjee.services.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

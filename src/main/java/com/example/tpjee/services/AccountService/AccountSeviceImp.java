@@ -1,7 +1,8 @@
 package com.example.tpjee.services.AccountService;
 
-import com.example.tpjee.Entity.AppRole;
-import com.example.tpjee.Entity.AppUser;
+
+import com.example.tpjee.Entity.Security.Role;
+import com.example.tpjee.Entity.Security.User;
 import com.example.tpjee.repository.User.AppRoleRepository;
 import com.example.tpjee.repository.User.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,30 +17,30 @@ public class AccountSeviceImp implements AccountService {
     @Autowired
     private AppRoleRepository appRoleRepository;
     @Override
-    public AppUser addNewUser(AppUser appUser) {
+    public User addNewUser(User appUser) {
         return appUserRepository.save(appUser);
     }
 
     @Override
-    public AppRole addNewRole(AppRole appRole) {
+    public Role addNewRole(Role appRole) {
         return appRoleRepository.save(appRole);
     }
 
     @Override
     public void addRoleToUser(String username, String roleName) {
-       AppUser userapp=appUserRepository.findByUsername(username);
-       AppRole userrole=appRoleRepository.findByRoleName(roleName);
-       userapp.getAppRoles().add(userrole);
+       User userapp=appUserRepository.findByUsername(username);
+       Role userrole=appRoleRepository.findByName(roleName);
+       userapp.getRoles().add(userrole);
 
     }
 
     @Override
-    public AppUser loadUserByUsername(String username) {
+    public User loadUserByUsername(String username) {
         return appUserRepository.findByUsername(username);
     }
 
     @Override
-    public List<AppUser> listUsers() {
+    public List<User> listUsers() {
         return appUserRepository.findAll();
     }
 }

@@ -1,7 +1,7 @@
 package com.example.tpjee.services.security.services;
 
+import com.example.tpjee.Entity.Security.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.itgate.ecommerce.models.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

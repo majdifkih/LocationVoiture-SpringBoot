@@ -1,14 +1,15 @@
 package com.example.tpjee.services.AccountService;
 
-import com.example.tpjee.Entity.AppRole;
-import com.example.tpjee.Entity.AppUser;
+
+import com.example.tpjee.Entity.Security.Role;
+import com.example.tpjee.Entity.Security.User;
 
 import java.util.List;
 
 public interface AccountService {
-    AppUser addNewUser(AppUser appUser);
-    AppRole addNewRole(AppRole appRole);
+    User addNewUser(User appUser);
+    Role addNewRole(Role appRole);
     void addRoleToUser(String username,String roleName);
-    AppUser loadUserByUsername(String username);
-    List<AppUser> listUsers();
+    User loadUserByUsername(String username);
+    List<User> listUsers();
 }

@@ -1,7 +1,8 @@
 package com.example.tpjee.services.security.services;
 
-import com.itgate.ecommerce.models.User;
-import com.itgate.ecommerce.repository.UserRepository;
+
+import com.example.tpjee.Entity.Security.User;
+import com.example.tpjee.repository.User.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
   @Autowired
-  UserRepository userRepository;
+  AppUserRepository userRepository;
 
   @Override
   @Transactional
